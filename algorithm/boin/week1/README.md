@@ -4,6 +4,6 @@
 - 문자열 안에 백슬래시를 사용하려면, 앞에 백슬래시 하나를 더 붙여줘야한다. 
 - map에 int와 input().split()을 넣으면 split의 결과를 모두 int로 변환해준다 => map(int, input('숫자 두 개를 입력하세요: ').split())
 - for문의 기본구조는 "for 변수 in 리스트/튜플/문자열/range함수:" 이다.
-- 문자열 안에 변수를 넣어야 할 때는 f-string을 사용한다. Ex) message = f"I'm {age} years old"
+- 문자열 안에 변수를 넣어야 할 때는 [f-string](https://dejavuqa.tistory.com/270)을 사용한다. Ex) message = f"I'm {age} years old"
 
 
