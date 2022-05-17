@@ -33,7 +33,30 @@ do {
   // Remainder section
 } while(true);
 ```
+  
 
+### Atomicity
+- 더이상 쪼갤 수 없는 operation의 단위를 atomic operation이라고 한다. 
+- test_and_set() instruction
+```c
+do {
+  while (test_and_set(&lock))
+    ;
+  // Critical section
+  lock = false;
+  // Remainder section
+} while(true);
+```
+- compare_and_swap() instruction
+```c
+while(true) {
+  while(compare_and_swap(&lock, 0, 1) != 0) 
+    ;
+  // Critical section
+  lock = 0;
+  // Remainder section
+}
+```
 
 
 
