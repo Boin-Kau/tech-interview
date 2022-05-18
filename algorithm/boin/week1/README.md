@@ -12,3 +12,4 @@
 - **h = [int(input()) for _ in range(10)]**로 10번 입력받아 배열에 저장할 수 있다. 
 - [리스트 내 중복요소 제거는 set 데이터 타입을 활용](https://infinitt.tistory.com/78)한다. set은 중복요소들을 허용하지 않는 데이터 타입이다. 
 - [sum()](https://codechacha.com/ko/python-sum/)으로 리스트 요소들의 합계를 구할 수 있다. 
+- [f-string 서식지정자를 이용하면 소수점 자리 수를 조정](https://blockdmask.tistory.com/534)할 수 있다. result를 소수점 3번 째 자리까지 출력하고 싶다면, 'f{result:.3f}'로 작성하면 된다. 
