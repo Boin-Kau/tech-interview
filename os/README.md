@@ -7,7 +7,7 @@
 
 ## 면접 예상질문
 <details>
-<summary>프로세스 생성 과정에 대해서 설명해보세요</summary>
+<summary>프로세스 생성 과정에 대해서 설명해보세요.</summary>
 <div markdown="1">
   
 - 일반적인 프로세스 생성 과정
@@ -20,7 +20,7 @@
 </details>
 
 <details>
-<summary>프로세스와 쓰레드의 차이를 설명해보세요</summary>
+<summary>프로세스와 쓰레드의 차이를 설명해보세요.</summary>
 <div markdown="1">
   
 - 프로세스는 실행되는 프로그램 자체와 프로그램이 실행되는 주변 환경을 포함하는 개념이다. 실행되는 주변 환경이란 사용중인 파일, 데이터, 메모리 영역 주소 공간등을 뜻한다.
@@ -34,7 +34,7 @@
 </details>
 
 <details>
-<summary>크롬 탭이 프로세스인지 쓰레드인지 설명해보세요</summary>
+<summary>크롬 탭이 프로세스인지 쓰레드인지 설명해보세요.</summary>
 <div markdown="1">
   
 - 크롬은 탭마다 PID를 가지고 있으니 Process이며 각 Tab마다 랜더링 정보나 기타 데이터를 따로 관리한다고 한다. 그로인해 메모리를 많이 잡아먹기도 하지만 하나의 Tab에 오류가 생겼다고 모든 Tab에 영향을 끼치진 않는다.
@@ -43,7 +43,7 @@
 </details>
 
 <details>
-<summary>컨텍스트 스위칭에 대해 설명해보세요</summary>
+<summary>컨텍스트 스위칭에 대해 설명해보세요.</summary>
 <div markdown="1">
   
 - 컨텍스트 스위칭은 한 Task가 끝날 때까지 기다리는 것이 아니라 여러 작업을 번갈아가며 실행해서 동시에 처리될 수 있도록 하는 방법입니다.
@@ -82,6 +82,36 @@
 <div markdown="1">
   
 - process context-switching이 발생해야 하므로, PCB(Process state, Process number, pc, registers, CPU scheduling information 등)와 TCB 관련 정보 모두 save & restore 되어야 한다. 
+
+</div>
+</details>
+
+<details>
+<summary>Thread-safe의 개념에 대해 설명하세요.</summary>
+<div markdown="1">
+  
+- Thread safe는 멀티 스레드 프로그래밍 환경에서 일반적으로 어떤 함수나 변수, 혹은 객체가 여러 스레드로부터 동시에 접근이 이루어져도 프로그램의 실행에 문제가 없는 것을 말한다.
+
+- Thread-safe한 코드를 만들기 위해서는 Critical Section(임계 영역)을 동기화 기법으로 제어한다. 이를 상호 배제(mutual exclusion)라 한다.
+
+</div>
+</details>
+
+<details>
+<summary>교착상태(deadlock)가 무엇인지, 그리고 발생하는 조건을 설명하세요.</summary>
+<div markdown="1">
+  
+- 두 개 이상의 프로세스나 스레드가 서로 자원을 기다리면서 무한히 기다리게 되는 상태를 말한다.
+- 상호 배제(mutual exclusion), 점유 대기(hold and wait), 비선점(non preemptive), 순환 대기(circle wait) 네 가지 조건을 모두 만족해야 교착 상태가 발생한다. 순환 대기의 경우 점유 대기와 비선점 조건을 만족해야 성립하므로 4가지 조건은 완전히 서로 독립적이지 않다.
+
+</div>
+</details>
+
+<details>
+<summary>세마포어(Semaphore)와 뮤텍스(Mutex)의 차이를 설명하세요.</summary>
+<div markdown="1">
+  
+- 뮤텍스는 Locking 메커니즘으로 락을 걸은 쓰레드만이 임계 영역을 나갈때 락을 해제할 수 있다. 하지만 세마포어는 Signaling 메커니즘으로 락을 걸지 않은 쓰레드도 signal을 사용해 락을 해제할 수 있다. 세마포어의 카운트를 1로 설정하면 뮤텍스처럼 활용할 수 있다.
 
 </div>
 </details>
